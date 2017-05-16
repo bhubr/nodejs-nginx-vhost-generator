@@ -1,0 +1,6 @@
+{
+  "name": "node-nginx-vhost",
+  "dependencies": {
+    "handlebars": "^4.0.8"
+  }
+}
