@@ -1,8 +1,8 @@
 const Handlebars = require('handlebars');
 const fs = require('fs');
-const nginxTemplate = (fs.readFileSync('nginx.hbs.conf').toString());
+const nginxTemplate = (fs.readFileSync(__dirname + '/nginx.hbs.conf').toString());
 const template = Handlebars.compile(nginxTemplate);
-const RESTRICTED_IPS_JSON = './restrictedIps.json';
+const RESTRICTED_IPS_JSON = __dirname + '/restrictedIps.json';
 let restrictedIps;
 
 if(process.argv.length < 5) {
